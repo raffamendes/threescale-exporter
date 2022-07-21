@@ -8,6 +8,8 @@ import javax.ws.rs.QueryParam;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
+import com.rmendes.model.Account;
+
 import io.vertx.core.json.JsonObject;
 
 @RegisterRestClient(configKey = "threescale-api")
@@ -17,6 +19,10 @@ public interface ThreeScaleRestClient {
 	@GET
 	@Path("/admin/api/accounts.json")
 	JsonObject getAllAccounts(@QueryParam(value = "access_token") String accessToken);
+
+	@GET
+	@Path("/admin/api/accounts/{account_id}")
+	Account getAccountById(@PathParam("account_id")Integer accountId, @QueryParam(value = "access_token") String accessToken);
 	
 	@GET
 	@Path("/admin/api/accounts/{account_id}/users.json")

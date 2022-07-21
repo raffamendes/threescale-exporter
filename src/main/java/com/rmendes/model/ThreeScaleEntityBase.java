@@ -1,18 +1,17 @@
 package com.rmendes.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ThreeScaleEntityBase {
 	
+    @JsonProperty("id")
 	public Long id;
-	
 	@JsonProperty("created_at")
-	public LocalDateTime createdAt;
-	
+	public LocalDate createdAt;
 	@JsonProperty("updated_at")
-	public LocalDateTime updatedAt;
+	public LocalDate updated_at;
 	
 		
 
