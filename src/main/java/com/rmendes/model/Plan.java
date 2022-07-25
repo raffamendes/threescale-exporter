@@ -6,175 +6,226 @@ public class Plan {
 	private String name;
 	private String type;
 	private String state;
-	private boolean approval_required;
-	private double setup_fee;
-	private double cost_per_month;
-	private Object trial_period_days;
-	private int cancellation_period;
-	private int service_id;
+	private boolean approvalRequired;
+	private double setupFee;
+	private double costPerMonth;
+	private Object trialPeriodDays;
+	private int cancellationPeriod;
+	private int serviceId;
 	private boolean _default;
 	private String text;
 	private boolean custom;
 
 
     public Plan(){}
+
+
     /**
      * @return the id
      */
     public int getId() {
         return id;
     }
+
+
     /**
      * @param id the id to set
      */
     public void setId(int id) {
         this.id = id;
     }
+
+
     /**
      * @return the name
      */
     public String getName() {
         return name;
     }
+
+
     /**
      * @param name the name to set
      */
     public void setName(String name) {
         this.name = name;
     }
+
+
     /**
      * @return the type
      */
     public String getType() {
         return type;
     }
+
+
     /**
      * @param type the type to set
      */
     public void setType(String type) {
         this.type = type;
     }
+
+
     /**
      * @return the state
      */
     public String getState() {
         return state;
     }
+
+
     /**
      * @param state the state to set
      */
     public void setState(String state) {
         this.state = state;
     }
+
+
     /**
-     * @return the approval_required
+     * @return the approvalRequired
      */
-    public boolean isApproval_required() {
-        return approval_required;
+    public boolean isApprovalRequired() {
+        return approvalRequired;
     }
+
+
     /**
-     * @param approval_required the approval_required to set
+     * @param approvalRequired the approvalRequired to set
      */
-    public void setApproval_required(boolean approval_required) {
-        this.approval_required = approval_required;
+    public void setApprovalRequired(boolean approvalRequired) {
+        this.approvalRequired = approvalRequired;
     }
+
+
     /**
-     * @return the setup_fee
+     * @return the setupFee
      */
-    public double getSetup_fee() {
-        return setup_fee;
+    public double getSetupFee() {
+        return setupFee;
     }
+
+
     /**
-     * @param setup_fee the setup_fee to set
+     * @param setupFee the setupFee to set
      */
-    public void setSetup_fee(double setup_fee) {
-        this.setup_fee = setup_fee;
+    public void setSetupFee(double setupFee) {
+        this.setupFee = setupFee;
     }
+
+
     /**
-     * @return the cost_per_month
+     * @return the costPerMonth
      */
-    public double getCost_per_month() {
-        return cost_per_month;
+    public double getCostPerMonth() {
+        return costPerMonth;
     }
+
+
     /**
-     * @param cost_per_month the cost_per_month to set
+     * @param costPerMonth the costPerMonth to set
      */
-    public void setCost_per_month(double cost_per_month) {
-        this.cost_per_month = cost_per_month;
+    public void setCostPerMonth(double costPerMonth) {
+        this.costPerMonth = costPerMonth;
     }
+
+
     /**
-     * @return the trial_period_days
+     * @return the trialPeriodDays
      */
-    public Object getTrial_period_days() {
-        return trial_period_days;
+    public Object getTrialPeriodDays() {
+        return trialPeriodDays;
     }
+
+
     /**
-     * @param trial_period_days the trial_period_days to set
+     * @param trialPeriodDays the trialPeriodDays to set
      */
-    public void setTrial_period_days(Object trial_period_days) {
-        this.trial_period_days = trial_period_days;
+    public void setTrialPeriodDays(Object trialPeriodDays) {
+        this.trialPeriodDays = trialPeriodDays;
     }
+
+
     /**
-     * @return the cancellation_period
+     * @return the cancellationPeriod
      */
-    public int getCancellation_period() {
-        return cancellation_period;
+    public int getCancellationPeriod() {
+        return cancellationPeriod;
     }
+
+
     /**
-     * @param cancellation_period the cancellation_period to set
+     * @param cancellationPeriod the cancellationPeriod to set
      */
-    public void setCancellation_period(int cancellation_period) {
-        this.cancellation_period = cancellation_period;
+    public void setCancellationPeriod(int cancellationPeriod) {
+        this.cancellationPeriod = cancellationPeriod;
     }
+
+
     /**
-     * @return the service_id
+     * @return the serviceId
      */
-    public int getService_id() {
-        return service_id;
+    public int getServiceId() {
+        return serviceId;
     }
+
+
     /**
-     * @param service_id the service_id to set
+     * @param serviceId the serviceId to set
      */
-    public void setService_id(int service_id) {
-        this.service_id = service_id;
+    public void setServiceId(int serviceId) {
+        this.serviceId = serviceId;
     }
+
+
     /**
      * @return the _default
      */
     public boolean is_default() {
         return _default;
     }
+
+
     /**
      * @param _default the _default to set
      */
     public void set_default(boolean _default) {
         this._default = _default;
     }
+
+
     /**
      * @return the text
      */
     public String getText() {
         return text;
     }
+
+
     /**
      * @param text the text to set
      */
     public void setText(String text) {
         this.text = text;
     }
+
+
     /**
      * @return the custom
      */
     public boolean isCustom() {
         return custom;
     }
+
+
     /**
      * @param custom the custom to set
      */
     public void setCustom(boolean custom) {
         this.custom = custom;
     }
-
 
     
     

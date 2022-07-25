@@ -1,12 +1,9 @@
 package com.rmendes.model;
-import java.util.Date;
 import java.util.List;
 
-public class Account {
+public class Account extends ThreeScaleEntityBase{
     
     private int id;
-	private Date createdAt;
-	private Date updatedAt;
 	private String state;
 	private String orgName;
 	private Object extraFields;
@@ -30,34 +27,6 @@ public class Account {
      */
     public void setId(int id) {
         this.id = id;
-    }
-
-    /**
-     * @return the createdAt
-     */
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    /**
-     * @param createdAt the createdAt to set
-     */
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    /**
-     * @return the updatedAt
-     */
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    /**
-     * @param updatedAt the updatedAt to set
-     */
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
     }
 
     /**

@@ -1,18 +1,14 @@
 package com.rmendes.model;
 
-import java.util.Date;
-
-public class User {
+public class User extends ThreeScaleEntityBase{
 
     private int id;
-	private Date created_at;
-	private Date updated_at;
-	private int account_id;
+	private int AccountId;
 	private String state;
 	private String role;
 	private String username;
 	private String email;
-	private Object extra_fields;
+	private Object extraFields;
 
 
     public User(){}
@@ -35,50 +31,18 @@ public class User {
 
 
     /**
-     * @return the created_at
+     * @return the accountId
      */
-    public Date getCreated_at() {
-        return created_at;
+    public int getAccountId() {
+        return AccountId;
     }
 
 
     /**
-     * @param created_at the created_at to set
+     * @param accountId the accountId to set
      */
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
-    }
-
-
-    /**
-     * @return the updated_at
-     */
-    public Date getUpdated_at() {
-        return updated_at;
-    }
-
-
-    /**
-     * @param updated_at the updated_at to set
-     */
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
-    }
-
-
-    /**
-     * @return the account_id
-     */
-    public int getAccount_id() {
-        return account_id;
-    }
-
-
-    /**
-     * @param account_id the account_id to set
-     */
-    public void setAccount_id(int account_id) {
-        this.account_id = account_id;
+    public void setAccountId(int accountId) {
+        AccountId = accountId;
     }
 
 
@@ -147,20 +111,21 @@ public class User {
 
 
     /**
-     * @return the extra_fields
+     * @return the extraFields
      */
-    public Object getExtra_fields() {
-        return extra_fields;
+    public Object getExtraFields() {
+        return extraFields;
     }
 
 
     /**
-     * @param extra_fields the extra_fields to set
+     * @param extraFields the extraFields to set
      */
-    public void setExtra_fields(Object extra_fields) {
-        this.extra_fields = extra_fields;
+    public void setExtraFields(Object extraFields) {
+        this.extraFields = extraFields;
     }
 
-    
+
+
     
 }
