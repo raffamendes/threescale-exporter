@@ -1,8 +1,13 @@
 package com.rmendes.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
+@JsonRootName("plan")
 public class Plan {
 
-    public int id;
+    public Long id;
+    @JsonProperty("name")
 	public String name;
 	public String type;
 	public String state;

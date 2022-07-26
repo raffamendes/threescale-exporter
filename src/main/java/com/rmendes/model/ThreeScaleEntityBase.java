@@ -12,11 +12,11 @@ public class ThreeScaleEntityBase {
 	
 	@JsonProperty("created_at")
 	@XmlElement(name = "created_at")
-	public LocalDateTime createdAt;
+	public String createdAt;
 	
 	@JsonProperty("updated_at")
 	@XmlElement(name = "updated_at")
-	public LocalDateTime updatedAt;
+	public String updatedAt;
 	
 		
 
