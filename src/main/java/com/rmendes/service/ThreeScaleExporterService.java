@@ -8,6 +8,8 @@ import javax.inject.Inject;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rmendes.model.Account;
+import com.rmendes.model.Application;
+import com.rmendes.model.Plan;
 import com.rmendes.model.NewAccount;
 import com.rmendes.rest.ThreeScaleRestClient;
 import com.rmendes.rest.ThreeScaleRestClientSource;
@@ -69,6 +71,31 @@ public class ThreeScaleExporterService {
 				}).collect(Collectors.toList());
 	}
 
-	
+ 	public List<Plan> findAllApplicationPlansSource(){
+		List<Plan> plans = clientSource.getAllApplicationPlans(accessTokenSource).getJsonArray("plans").stream()
+			.map(s ->{
+				try {
+					Plan plan =  new ObjectMapper().readValue(((JsonObject)s).getJsonObject("application_plan").toString(), Plan.class);
+					return plan;
+				}catch (Exception e) {
+					throw new RuntimeException(e);
+				}
+			}).collect(Collectors.toList());
+		return plans;
+	}
 
+	public List<Application> findAllApplicationSource(){
+		List<Application> apps = clientSource.getAllApplication(accessTokenSource).getJsonArray("applications").stream()
+			.map(s ->{
+				try {
+					Application app =  new ObjectMapper().readValue(((JsonObject)s).getJsonObject("application").toString(), Application.class);
+					return app;
+				}catch (Exception e) {
+					throw new RuntimeException(e);
+				}
+			}).collect(Collectors.toList());
+		return apps;
+	}
+
+	
 }

@@ -24,7 +24,14 @@ public interface ThreeScaleRestClientSource {
 	@GET
 	@Path("/admin/api/accounts/{id}")
 	Account getAccountById(@QueryParam(value = "access_token") String accessToken, @PathParam("id") Long id);
-	
-	
 
+	@GET
+	@Path("/admin/api/application_plans.json")
+	JsonObject getAllApplicationPlans(@QueryParam(value = "access_token") String accessToken);
+
+	@GET
+	@Path("/admin/api/applications.json")
+	JsonObject getAllApplication(@QueryParam(value = "access_token") String accessToken);
+
+	
 }

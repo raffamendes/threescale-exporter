@@ -66,4 +66,18 @@ public class ThreeScaleResource {
 		return Response.ok(service.findAccountsSource()).build();
 	}
 
+	@GET
+	@Path("/source/plans")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getPlansFromSource() throws JsonMappingException, JsonProcessingException {
+		return Response.ok(service.findAllApplicationPlansSource()).build();
+	}
+
+	@GET
+	@Path("/source/applications")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getApplicationsFromSource() throws JsonMappingException, JsonProcessingException {
+		return Response.ok(service.findAllApplicationSource()).build();
+	}
+
 }
