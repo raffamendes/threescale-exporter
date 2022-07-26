@@ -2,6 +2,8 @@ package com.rmendes.model;
 
 import java.time.LocalDateTime;
 
+import javax.xml.bind.annotation.XmlElement;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ThreeScaleEntityBase {
@@ -9,10 +11,12 @@ public class ThreeScaleEntityBase {
 	public Long id;
 	
 	@JsonProperty("created_at")
-	public LocalDateTime createdAt;
+	@XmlElement(name = "created_at")
+	public String createdAt;
 	
 	@JsonProperty("updated_at")
-	public LocalDateTime updatedAt;
+	@XmlElement(name = "updated_at")
+	public String updatedAt;
 	
 		
 
