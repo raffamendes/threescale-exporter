@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rmendes.model.AccountUser;
+import com.rmendes.model.Account;
+import com.rmendes.model.NewAccount;
 import com.rmendes.rest.ThreeScaleRestClient;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
@@ -41,5 +41,10 @@ public class ThreeScaleExporterService {
 				}).collect(Collectors.toList());
 				
 	}
+	
+	public Account createAccount(NewAccount newAcc) {
+		return client.createAccountByApi(accessToken, newAcc.orgName, newAcc.username, newAcc.email, newAcc.password, 6,5,7);
+	}
+
 
 }
